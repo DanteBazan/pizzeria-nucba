@@ -50,44 +50,28 @@ const form = document.querySelector(".form");
 const number = document.querySelector("#number");
 const containerCard = document.querySelector(".container-card");
 
-// form.addEventListener("submit", (e) => {
-//   e.preventDefault();
-//   const buscarPizza = pizzas.find((pizza) => {
-//     if (pizza.id === parseInt(number.value)) {
-//       containerCard.innerHTML = `
-//       <img src="${pizza.imagen}">
-//       <h3>${pizza.nombre}</h3>
-//       <h3>${pizza.precio}</h3>
-//       `;
-//     } else {
-//       containerCard.innerHTML = `
-//       <h3>No flaco, la pizza que buscas no esta disponible</h3>
-//       `;
-//     }
-//     if (buscarPizza) {
-//       localStorage.setItem("pizza", buscarPizza);
-//     }
-//   });
-// });
-
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  const searchPizza = pizzas.filter((pizza) => {
-    if (parseInt(number.value) === pizza.id) {
-      containerCard.innerHTML = `
-      <div>
-         <img src="${pizza.imagen}"/>
-         <h3>${pizza.nombre}</h3>
-         <h3>${pizza.precio}</h3>      
-      </div>
-      `;
-    } else {
-      containerCard.innerHTML = `
-      <h3>Flaco, la pizza que buscas no esta en el local</h3>
-      `;
-    }
-    if (searchPizza) {
-      localStorage.setItem("pizza", searchPizza);
-    }
-  });
+  const buscarPizza = pizzas.find(
+    (pizza) => pizza.id === parseInt(number.value)
+  );
+  const pizzaEncontrada = buscarPizza;
+  if (pizzaEncontrada) {
+    containerCard.innerHTML = `
+    <div class="card">
+        <img src="${pizzaEncontrada.imagen}" />
+        <div class="container-description">
+        <h3 class="title-card">Nombre: ${pizzaEncontrada.nombre}</h3>
+        <h3>Precio: ${pizzaEncontrada.precio}</h3>
+        </div>
+    </div>
+    `;
+    localStorage.setItem("pizza", JSON.stringify(pizzaEncontrada));
+  } else {
+    containerCard.innerHTML = `
+    <div>
+    <h3 class="error-msj">Flaco, la pizza que buscas no la tenemos</h3>
+    </div>
+    `;
+  }
 });
