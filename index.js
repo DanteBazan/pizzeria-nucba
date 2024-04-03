@@ -45,3 +45,49 @@ const pizzas = [
     imagen: "./img/anana.png",
   },
 ];
+
+const form = document.querySelector(".form");
+const number = document.querySelector("#number");
+const containerCard = document.querySelector(".container-card");
+
+// form.addEventListener("submit", (e) => {
+//   e.preventDefault();
+//   const buscarPizza = pizzas.find((pizza) => {
+//     if (pizza.id === parseInt(number.value)) {
+//       containerCard.innerHTML = `
+//       <img src="${pizza.imagen}">
+//       <h3>${pizza.nombre}</h3>
+//       <h3>${pizza.precio}</h3>
+//       `;
+//     } else {
+//       containerCard.innerHTML = `
+//       <h3>No flaco, la pizza que buscas no esta disponible</h3>
+//       `;
+//     }
+//     if (buscarPizza) {
+//       localStorage.setItem("pizza", buscarPizza);
+//     }
+//   });
+// });
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const searchPizza = pizzas.filter((pizza) => {
+    if (parseInt(number.value) === pizza.id) {
+      containerCard.innerHTML = `
+      <div>
+         <img src="${pizza.imagen}"/>
+         <h3>${pizza.nombre}</h3>
+         <h3>${pizza.precio}</h3>      
+      </div>
+      `;
+    } else {
+      containerCard.innerHTML = `
+      <h3>Flaco, la pizza que buscas no esta en el local</h3>
+      `;
+    }
+    if (searchPizza) {
+      localStorage.setItem("pizza", searchPizza);
+    }
+  });
+});

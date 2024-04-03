@@ -22,14 +22,10 @@ body {
 
 h1 {
   text-align: center;
-  background: linear-gradient(rgb(210, 22, 12), rgb(213, 220, 15));
+  background: linear-gradient(rgb(255, 13, 0), rgb(180, 186, 3));
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
-}
-
-.second-title {
-  color: rgb(10, 144, 10);
 }
 
 .form {
