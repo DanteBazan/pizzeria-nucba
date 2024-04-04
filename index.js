@@ -74,16 +74,17 @@ form.addEventListener("submit", (e) => {
     </div>
     `;
   }
-  const ultimaPizzaEncontrada = JSON.parse(localStorage.getItem("pizza"));
-  if (ultimaPizzaEncontrada) {
-    containerCard.innerHTML = `
+});
+
+const ultimaPizzaEncontrada = JSON.parse(localStorage.getItem("pizza"));
+if (ultimaPizzaEncontrada) {
+  containerCard.innerHTML = `
   <div class="card">
-        <img src="${pizzaEncontrada.imagen}" />
+        <img src="${ultimaPizzaEncontrada.imagen}" />
         <div class="container-description">
-        <h3 class="title-card">Nombre: ${pizzaEncontrada.nombre}</h3>
-        <h3>Precio: ${pizzaEncontrada.precio}</h3>
+        <h3 class="title-card">Nombre: ${ultimaPizzaEncontrada.nombre}</h3>
+        <h3>Precio: ${ultimaPizzaEncontrada.precio}</h3>
         </div>
     </div>
   `;
-  }
-});
+}
