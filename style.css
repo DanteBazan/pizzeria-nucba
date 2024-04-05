@@ -2,12 +2,97 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
+  /* border: 1px solid black; */
+}
+
+:root {
+  --color-white: rgb(235, 232, 232);
+  --background-rose: rgb(236, 76, 161);
+  --color-salame: rgb(170, 48, 48);
 }
 
 body {
-  background: rgb(34, 34, 34);
-  color: rgb(222, 218, 218);
-  font-family: sans-serif;
+  background: rgb(217, 200, 146);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+/* header */
+
+.header {
+  background: rgb(170, 48, 48);
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem 0;
+  box-shadow: 0 0 1px 0 var(--color-white);
+}
+
+h1 {
+  font-size: 1.5rem;
+  color: rgb(199, 199, 17);
+}
+
+.nav-bar {
+  display: flex;
+}
+
+.nav-bar__list {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-bar__list li {
+  list-style-type: none;
+}
+
+.nav-bar__list a {
+  color: var(--color-white);
+}
+
+.nav-bar__list a:hover {
+  text-decoration: underline;
+}
+
+/* hero */
+
+.hero {
+  max-width: 1200px;
+  display: flex;
+}
+
+.hero-info {
+  max-width: 600px;
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 3rem;
+}
+
+.hero-description {
+  max-width: 13rem;
+  color: rgb(14, 124, 14);
+}
+
+.button-hero {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background: rgb(219, 158, 45);
+}
+
+.hero-img {
+  max-width: 600px;
+}
+
+.img-hero {
+  height: 20rem;
 }
 
 /* MAIN */
@@ -20,7 +105,7 @@ body {
   gap: 2rem;
 }
 
-h1 {
+.main-title {
   text-align: center;
   background: linear-gradient(rgb(255, 13, 0), rgb(180, 186, 3));
   color: transparent;

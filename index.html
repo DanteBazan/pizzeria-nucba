@@ -7,13 +7,43 @@
     <title>Document</title>
   </head>
   <body>
+    <header class="header">
+      <div>
+        <h1>Pizzeria Nucba</h1>
+      </div>
+      <nav class="nav-bar">
+        <ul class="nav-bar__list">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
     <main class="main">
-      <h1>Bienvenido a la pizzeria de Nucba</h1>
+      <section id="home" class="hero">
+        <div class="hero-info">
+          <h2 class="title-hero">Pizzeria Nucba</h2>
+          <p class="hero-description">
+            Somos una pizzeria situada en Buenos Aires, que aparte de tener una
+            de las mejores pizzas de Argentina te enseñamos a programar, que
+            decis?, te animas?
+          </p>
+          <input type="submit" class="button-hero" />
+        </div>
+        <div class="hero-img">
+          <img
+            src="./img/pizza.png"
+            alt="pizzeria-nucba__logo"
+            class="img-hero"
+          />
+        </div>
+      </section>
+      <h2 class="main-title">Bienvenido a la pizzeria de Nucba</h2>
       <section>
         <form class="form">
-          <h2 class="second-title">
+          <h3 class="second-title">
             Ingresa el ID de la pizza que quieras buscar
-          </h2>
+          </h3>
           <div>
             <input type="number" id="number" placeholder="Ingrese un numero" />
           </div>
