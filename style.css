@@ -209,3 +209,27 @@ img {
   color: var(--color-salame);
   text-align: center;
 }
+
+/* responsive design */
+@media (max-width: 800px) {
+  .hero {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .title-hero {
+    text-align: center;
+  }
+
+  .hero-description {
+    text-align: center;
+  }
+
+  .hero-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
