@@ -62,7 +62,7 @@ form.addEventListener("submit", (e) => {
         <img src="${pizzaEncontrada.imagen}" />
         <div class="container-description">
         <h3 class="title-card">Nombre: ${pizzaEncontrada.nombre}</h3>
-        <h3>Precio: ${pizzaEncontrada.precio}</h3>
+        <h3 class="card-precio">Precio: ${pizzaEncontrada.precio}</h3>
         </div>
     </div>
     `;
@@ -70,7 +70,7 @@ form.addEventListener("submit", (e) => {
   } else {
     containerCard.innerHTML = `
     <div>
-    <h3 class="error-msj">Flaco, la pizza que buscas no la tenemos</h3>
+    <h3 class="error-msj">La pizza que buscas no la tenemos disponible</h3>
     </div>
     `;
   }
@@ -83,7 +83,7 @@ if (ultimaPizzaEncontrada) {
         <img src="${ultimaPizzaEncontrada.imagen}" />
         <div class="container-description">
         <h3 class="title-card">Nombre: ${ultimaPizzaEncontrada.nombre}</h3>
-        <h3>Precio: ${ultimaPizzaEncontrada.precio}</h3>
+        <h3 class="card-precio">Precio: ${ultimaPizzaEncontrada.precio}</h3>
         </div>
     </div>
   `;
