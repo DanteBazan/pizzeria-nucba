@@ -132,6 +132,7 @@ h1 {
 
 .second-title {
   color: var(--color-black);
+  text-align: center;
 }
 
 .form {
@@ -231,5 +232,9 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  .hero-img {
+    max-width: 25rem;
   }
 }
